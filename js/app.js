@@ -1,4 +1,4 @@
-'use strict';
+
 document.addEventListener('DOMContentLoaded', () => {
     //code below here
     const grid = document.querySelector('.grid');
@@ -73,7 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
     //make the tetromino move down every second
     timerId = setInterval(moveDown, 1000);
 
+    //assign functions to keyCodes
+    function control(evt) {
+        if (evt.keyCode === 37) {
+            moveLeft();
+        } else if (evt.keyCode === 38) {
+            //rotate();
+        } else if (evt.keyCode === 39) {
+            moveRight();
+        } else if (evt.keyCode === 40) {
+            moveDown();
+        }
+    }
     
+    document.addEventListener('keyup', control);
 
     //move down function
     function moveDown() {
@@ -101,17 +114,31 @@ document.addEventListener('DOMContentLoaded', () => {
         undraw();
         const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0);
 
-        if(!isAtLeftEdge) {
-            currentPosition -=1;
+        if (!isAtLeftEdge) {
+            currentPosition -= 1;
         }
 
-        if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
-            currentPosition +=1;
+        if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+            currentPosition += 1;
         }
         draw();
     }
 
+    //move the tetromino right, unless is at the edge or there is a blockage
 
+    function moveRight() {
+        undraw();
+        const isAtRightEdge = current.some(index => (currentPosition + index) % width === width - 1);
+
+        if (!isAtRightEdge) {
+            currentPosition += 1;
+        }
+
+        if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+            currentPosition -= 1;
+        }
+        draw();
+    }
 
 
     //code above
