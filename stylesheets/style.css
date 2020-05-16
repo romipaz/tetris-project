@@ -17,17 +17,20 @@ body {
   color: white;
   font-size: 24px;
   font-family: "Press Start 2P", cursive;
+  letter-spacing: 4px;
 }
 
 .wrapper {
   display: flex;
   flex-direction: row;
+  max-width: 1200px;
   padding: 30px;
-  width: 800px;
 }
 
 .info {
+  max-width: 1000px;
   display: flex;
+  flex-grow: 0;
   order: 1;
   flex-direction: column;
   color: white;
@@ -40,8 +43,25 @@ body {
   font-size: 14px;
   line-height: 1.8em;
   font-family: "Press Start 2P";
+  text-align: left;
+  letter-spacing: 2px;
 }
 
+
+.rules {
+  margin-top: 20px;
+  padding-left: 50px;
+  font-size: 14px;
+  line-height: 1.8em;
+  font-family: "Press Start 2P";
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.arrow {
+  font-size: large;
+  color: #b3ffab;
+}
 .alert {
   font-size: 60px;
   color: #b3ffab;
@@ -61,7 +81,6 @@ body {
   flex-wrap: wrap;
   width: 350px;
   height: 700px;
-  /*background-color: orange;*/
   background-image: linear-gradient(to bottom, #b3ffab 0%, #12fff7 100%);
 }
 
@@ -74,10 +93,6 @@ body {
 .tetromino {
   background-image: url(../images/Koffing.png);
   background-size: cover;
-  /*
-    background-color: rgb(100, 77, 163);
-    border: 0.03px outset #9cd1bdf1;
-    */
 }
 
 
@@ -117,18 +132,63 @@ body {
 /*button*/
 
 .start-btn {
-  margin-top: 20px;
+  margin-top: 30px;
   color: rgb(43, 26, 73);
   background-color: #b3ffab;
-  width: 80px;
-  height: 40px;
+  width: 100px;
+  height: 60px;
   border: none;
   border-radius: 10px;
-  font-family: "Press Start 2P";
   font-size: 24px;
   box-shadow: 3px 6px #888888;
 }
 
-.score-label {
-  margin-top: 40px;
+
+.start-btn:active {
+  margin-top: 31px;
+  box-shadow: 2px 4px #888888;
+  outline: none; 
 }
+
+.start-btn:focus {
+  outline: none; 
+}
+
+.score-label {
+  margin-top: auto
+}
+
+.hidden {
+  display: none;
+}
+
+
+.game-over {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  height: 300px;
+  width: 100%;
+  background-color: rgba(32, 11, 56, 0.739);
+  padding-top: 100px;
+  color: white;
+  font-size: 20px;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  font-size: 50px;
+}
+
+
+.score-label {
+  color: white;
+  font-size: 16px;
+  line-height: 2em;
+  font-family: "Press Start 2P";
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.score-num {
+  color: #b3ffab;
+}
+
