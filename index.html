@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cee649fe4c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./stylesheets/style.css">
     </link>
     <title>Tetris Mini-Game</title>
@@ -39,10 +40,10 @@
                 <div></div>
                 <div></div>
             </div>
-            <p class="alert">⚠️</p>
+            <p class="alert"><i class="fas fa-skull-crossbones"></i></p>
             <p class="context">The virus Koffing-19 is spreading at fast pace. We NEED YOU to contain it, as much as you can, in order to stop the outbreak.</p>
-            <p class="rules">Use your keyboard arrows <span class="arrow"> ⬅⬆➡⬇</span> to move and rotate the figure.</p>
-            <button id="start-btn" class="start-btn">▶️■</button>
+            <p class="rules">Use your keyboard arrows <span class="arrow"> ⬅⬇➡</span> to move and <span class="arrow">⬆</span> rotate the figure.</p>
+            <button id="start-btn" class="start-btn"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
 
             <h3 class="score-label">Score:<span id="score" class="score-num">0</span></h3>
         </section>
@@ -264,6 +265,6 @@
     </div>
     <script src="./js/app.js" charset="utf-8"></script>
 </body>
-<footer class="footer"><a href="https://github.com/romipaz">Created by <strong>RomiPaz</strong> 🦊</a></footer>
+<footer class="footer"><a href="https://github.com/romipaz">Created by <strong>RomiPaz</strong> <i class="fab fa-github"></i></a></footer>
 
 </html>
