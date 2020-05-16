@@ -1,44 +1,134 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
+body {
+  background-color: rgb(43, 26, 73);
+}
+
+.header {
+    width: 100%;
+  background-color: rgb(77, 49, 109);
+}
+
+.title {
+  padding: 20px 20px 20px 100px;
+  color: white;
+  font-size: 24px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  width: 800px;
+}
+
+.info {
+  display: flex;
+  order: 1;
+  flex-direction: column;
+  color: white;
+}
+
+
+.context {
+  margin-top: 20px;
+  padding-left: 50px;
+  font-size: 14px;
+  line-height: 1.8em;
+  font-family: "Press Start 2P";
+}
+
+.alert {
+  font-size: 60px;
+  color: #b3ffab;
+}
 .container {
-    display: flex;
+  margin-top: 20px;
+  margin-left: 100px;
+  display: flex;
+  border: 1px double rgb(77, 49, 109);
+  -webkit-box-shadow: -2px 5px 23px 6px rgba(143, 76, 143, 0.84);
+  -moz-box-shadow: -2px 5px 23px 6px rgba(143, 76, 143, 0.84);
+  box-shadow: -2px 5px 23px 6px rgba(143, 76, 143, 0.84);
 }
-
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 200px;
-    height: 400px;
-    /*background-color: orange;*/
-    background-image: linear-gradient(to bottom, #b3ffab 0%, #12fff7 100%);
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  height: 700px;
+  /*background-color: orange;*/
+  background-image: linear-gradient(to bottom, #b3ffab 0%, #12fff7 100%);
 }
 
 .grid div {
-    height: 20px;
-    width: 20px;
+  height: 35px;
+  width: 35px;
+  border: 0.03px dotted #9cd1bdf1;
 }
 
-
 .tetromino {
+  background-image: url(../images/Koffing.png);
+  background-size: cover;
+  /*
     background-color: rgb(100, 77, 163);
     border: 0.03px outset #9cd1bdf1;
+    */
 }
 
 
 .mini-grid {
-    margin-left: 30px;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #b3ffab;
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .mini-grid div {
-    height: 20px;
-    width: 20px;
+  height: 20px;
+  width: 20px;
+  border: 0.02px dotted #9cd1bdf1;
 }
 
+.hid {
+  display: none;
+}
+
+.footer {
+  background-color: rgb(77, 49, 109);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+.footer a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/*button*/
+
+.start-btn {
+  margin-top: 20px;
+  color: rgb(43, 26, 73);
+  background-color: #b3ffab;
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Press Start 2P";
+  font-size: 24px;
+  box-shadow: 3px 6px #888888;
+}
+
+.score-label {
+  margin-top: 40px;
+}

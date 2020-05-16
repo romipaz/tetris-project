@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //display shape in the mini-grid display, mirror effect;
     function displayShape() {
-        //remove any trace of a tetromino form the entire grid
+        //remove any trace of a tetromino from the entire mini-grid
         displaySquares.forEach(square => {
             square.classList.remove('tetromino')
         })
