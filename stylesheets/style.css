@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-    width: 100%;
+  width: 100%;
   background-color: rgb(77, 49, 109);
 }
 
@@ -36,7 +36,6 @@ body {
   color: white;
 }
 
-
 .context {
   margin-top: 20px;
   padding-left: 50px;
@@ -46,7 +45,6 @@ body {
   text-align: left;
   letter-spacing: 2px;
 }
-
 
 .rules {
   margin-top: 20px;
@@ -95,7 +93,6 @@ body {
   background-size: cover;
 }
 
-
 .mini-grid {
   margin-top: 20px;
   margin-left: 30px;
@@ -111,7 +108,7 @@ body {
   border: 0.02px dotted #9cd1bdf1;
 }
 
-.hid {
+.taken.hid {
   display: none;
 }
 
@@ -126,11 +123,41 @@ body {
 .footer a {
   color: white;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
 }
 
 /*button*/
+
+.reset-btn {
+  height: 40px;
+  width: 60px;
+  margin-top: 30px;
+  color: rgb(43, 26, 73);
+  background-color: #b3ffab;
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+  box-shadow: 3px 6px #888888;
+}
+
+.reset-btn:focus {
+  outline: none;
+}
+
+.reset-btn:active {
+  cursor: pointer;
+  background-color: rgb(77, 49, 109);
+  margin-top: 31px;
+  box-shadow: 2px 4px #888888;
+  outline: none;
+}
+
+.reset-btn:hover {
+  cursor: pointer;
+  background-color: rgb(77, 49, 109);
+  color: white;
+}
 
 .start-btn {
   margin-top: 30px;
@@ -144,25 +171,28 @@ body {
   box-shadow: 3px 6px #888888;
 }
 
+.start-btn:hover {
+  cursor: pointer;
+}
 
 .start-btn:active {
+  cursor: pointer;
   margin-top: 31px;
   box-shadow: 2px 4px #888888;
-  outline: none; 
+  outline: none;
 }
 
 .start-btn:focus {
-  outline: none; 
+  outline: none;
 }
 
 .score-label {
-  margin-top: auto
+  margin-top: auto;
 }
 
 .hidden {
   display: none;
 }
-
 
 .game-over {
   position: absolute;
@@ -179,7 +209,6 @@ body {
   font-size: 50px;
 }
 
-
 .score-label {
   color: white;
   font-size: 16px;
@@ -192,4 +221,3 @@ body {
 .score-num {
   color: #b3ffab;
 }
-

@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreDisplay = document.querySelector('#score');
     const gameOverDisplay = document.querySelector('.game-over');
     const startBtn = document.querySelector('#start-btn');
+    const resetBtn = document.querySelector('.reset-btn');
     const width = 10;
     let nextRandom = 0;
     let timerId
@@ -195,6 +196,14 @@ document.addEventListener('DOMContentLoaded', () => {
             displayShape();
         }
     })
+
+
+    resetBtn.addEventListener('click', () => {
+        location.reload();
+        return false;
+    })
+
+
 
     //Add score
     function addScore() {
